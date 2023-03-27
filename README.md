@@ -21,3 +21,33 @@ Userflow: https://drive.google.com/file/d/1tts9J4YuNbFZApa9c8H_eNE49ea1t_-4/view
 wireframe: https://drive.google.com/file/d/1jgLUqmFJ2m2ezPns2jHRwUtTwI9T8__7/view?usp=sharing
 
 Live server:https://sri-inovator.github.io/parkin/
+
+
+<h2>List of Features</h2>
+<h3>CRUD operation</h3>
+<ul>
+<li>Leaser and Tenant signup</li>
+<li>Leaser and Tenant login</li>
+<li>Leaser and Tenant edit profile</li>
+<li>Leaser and Tenant delete account</li>
+</ul>
+
+
+
+
+
+
+
+
+<h1>Parkin</h1>
+<p>If you into my website you can get a index page. In the index page have little idea about our website.</p>
+<h3>Create an account Scenario 1:</h3>
+	<h4>Successfully create an account Steps(for both Leaser and Tenant):</h4>
+	<p>Click the login button if your are a new user sign up in registration page. Enter the required information such as name, email,phone number and password. Result: The user is redirected to the login page.</p>
+<h3>Login Scenario 1:</h3>
+ <h4>Successfully login in to account Steps:</h4>
+ <p> Navigate to the login page. Enter the required information such as email,and password. Click the "login" button.</p>
+<p>Expected Result: The user is redirected to the profile page.</p>
+<p>Your Profile: Click Edit</p>
+<p>Result: The user is redirected to Edit page</p>
+ <p>There you can update your information </p>
