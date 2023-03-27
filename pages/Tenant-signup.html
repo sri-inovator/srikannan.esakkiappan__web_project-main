@@ -141,7 +141,9 @@ const number_2 =document.getElementById("number").value
 const Address =document.getElementById("subject").value
 const password_1 =document.getElementById("pass").value 
 const password_2 =document.getElementById("password").value  
-let user_data= {
+
+  if(password_1 == password_2){
+                let user_data= {
     "Firstname": first_name,
     "Lastname": last_name,
     "Email": email,
@@ -157,6 +159,12 @@ let Tenant= localStorage.getItem("Tenant")
 Tenant.push(user_data)
 localStorage.setItem("Tenant",JSON.stringify(Tenant))
 window.location.href="Tenant-log.html"
+  }
+
+  else{
+alert("Password and confirm password are not matched")
+}
+
           })
         </script>
 </body>
