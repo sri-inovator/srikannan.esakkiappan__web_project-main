@@ -7,7 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/signup-edit.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Parkin</title>
+  <link rel="icon" href="../assets/images/Logo.png">
 </head>
 
 <body>
@@ -19,11 +23,19 @@
     <nav id="nav">
 
       <!-- Navigation links -->
-      <a href="leaser-profile.html" id="save">Save</a>
+      <a id="save">Save</a>
       <a href="leaser-log.html" id="del">Delete</a>
       <a href="../index.html">Log out</a>
 
     </nav>
+    <div class="respons_nav">
+      <i class="fa-solid fa-bars" id="btttn"></i>
+      <div class="menu-list">
+        <a id="save">Save</a>
+        <a href="leaser-log.html" id="del">Delete</a>
+        <a href="../index.html">Log out</a>
+      </div>
+    </div>
 
   </header>
   <div id="hed">
@@ -36,7 +48,7 @@
           <label for="fname">First Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="fname" name="firstname" placeholder="Your name.." >
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
         </div>
       </div>
 
@@ -45,7 +57,7 @@
           <label for="lname">Last Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="Your last name.." >
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
         </div>
       </div>
 
@@ -54,7 +66,7 @@
           <label for="email">Email</label>
         </div>
         <div class="col-75">
-          <input type="email" id="email" name="user_email" >
+          <input type="email" id="email" name="user_email" disabled>
         </div>
       </div>
 
@@ -63,7 +75,7 @@
           <label for="name">Phone number</label>
         </div>
         <div class="col-75">
-          <input type="number" id="numb" name="numb" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}" >
+          <input type="number" id="numb" name="numb" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}">
         </div>
       </div>
 
@@ -72,7 +84,7 @@
           <label for="name">Another number</label>
         </div>
         <div class="col-75">
-          <input type="number" id="number" name="numb" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}" >
+          <input type="number" id="number" name="numb" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}">
         </div>
       </div>
 
@@ -81,7 +93,16 @@
           <label for="subject">Address</label>
         </div>
         <div class="col-75">
-          <textarea id="subject" name="subject" placeholder="Write something.."  style="height:50px"></textarea>
+          <textarea id="subject" name="subject" placeholder="Write address.." style="height:50px"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Parking location</label>
+        </div>
+        <div class="col-75">
+          <textarea id="sub" name="subject" placeholder="location link" style="height:40px"></textarea>
         </div>
       </div>
 
@@ -90,7 +111,7 @@
           <label for="name">Password</label>
         </div>
         <div class="col-75">
-          <input type="password" id="pass" name="numb" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" >
+          <input type="password" id="pass" name="numb" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
         </div>
       </div>
 
@@ -99,90 +120,57 @@
           <label for="name">Confirm Password</label>
         </div>
         <div class="col-75">
-          <input type="password" id="password" name="numb" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" >
+          <input type="password" id="password" name="numb" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
         </div>
       </div>
 
       <div class="row">
         <div class="col-25">
-          <label for="name">Upload pics</label>
+          <label for="name">Land Image</label>
         </div>
         <div class="col-75">
-          <input type="file" id="number" name="numb">
+          <input type="url" id="land_img" name="numb" accept="image/jpeg, image/png, image/jpg"><br>
+          <small id="land_image">Land_img_url...</small>
+          <a class="uplod" id="land_prev">Preview</a>
         </div>
+      </div>
+
+      <div id="display_image">
+
       </div>
 
       <div class="row">
         <div class="col-25">
-          <label for="name">Upload docs</label>
+          <label for="name">Land document</label>
         </div>
         <div class="col-75">
-          <input type="file" id="number" name="numb">
+          <input type="url" id="land_docs" name="numb" accept="image/jpeg, image/png, image/jpg"><br>
+          <small id="land_image">Land_doc_url...</small>
+          <a class="uplod" id="land_doc_prev">Preview</a>
         </div>
       </div>
 
+      <div id="display_docs">
+
+      </div>
+
       <div class="row">
-        <!-- <button id="save">save</button> -->
-        <!-- <button id="del">Delete</button> -->
-        <!-- <input type="submit" value="sign up" > -->
+        <div class="col-25">
+          <label for="name">User image</label>
+        </div>
+        <div class="col-75">
+          <input type="url" id="user_img" name="numb" accept="image/jpeg, image/png, image/jpg"><br>
+          <small id="land_image">user_img_url...</small>
+          <a class="uplod" id="user_prev">Preview</a>
+        </div>
+      </div>
+
+      <div id="display_photo">
+
       </div>
 
     </form>
-    <script>
-      let fname = document.getElementById("fname")
-      let lname = document.getElementById("lname")
-      let email = document.getElementById("email")
-      let numb = document.getElementById("numb")
-      let number = document.getElementById("number")
-      let address = document.getElementById("subject")
-      let pass = document.getElementById("pass")
-      let password = document.getElementById("password")
-      let data = JSON.parse(localStorage.getItem("leaser"))
-      let profile = JSON.parse(localStorage.getItem("profile_details"));
-      console.log(data)
-      console.log(profile)
-      let check;
-    data.find(e=>{
-      if(e["email"]==profile["username"]){
-      
-        return check=e;
-      }
-    })
-    
-      fname.value=check["firstname"]
-      lname.value=check["fastname"]
-      email.value=check["email"]
-      numb.value=check["phone_number"]
-      number.value=check["phone_number1"]
-      address.value=check["address"]
-      pass.value=check["password"]
-      password.value=check["confirm_password"]
-    
-      document.getElementById("save").addEventListener("click",e=>{
-        e.preventDefault();
-        check["firstname"]=document.getElementById("fname").value;
-        check["fastname"]=document.getElementById("lname").value;
-        check["email"]=document.getElementById("email").value;
-        check["phone_number"]=document.getElementById("numb").value;
-        check["phone_number1"]=document.getElementById("number").value;
-        check["address"]=document.getElementById("subject").value;
-        check["password"]=document.getElementById("pass").value;
-        check["confirm_password"]=document.getElementById("password").value;
-
-        localStorage.setItem("leaser",JSON.stringify(data))
-        window.location.href = "leaser-profile.html"
-    })
-    document.getElementById("del").addEventListener("click",e=>{
-        e.preventDefault();
-        console.log(check) 
-        let num=data.indexOf(check) 
-        data.splice(num,1)
-        localStorage.setItem("leaser",JSON.stringify(data))
-        alert("It's ok to delete your account")
-        window.location.href = "leaser-log.html"
-    })
-
-    </script>
 </body>
+<script src="../assets/js/leaser_edit.js"></script>
 
 </html>
